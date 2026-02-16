@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شهد ♥ احمد</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:"Cairo",Tahoma;
+  color:white;
+  overflow-x:hidden;
+  background:url('background.jpg') center/cover fixed no-repeat;
+}
+.page{
+  display:none;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  padding:20px;
+}
+button{
+  padding:14px 26px;
+  border:none;
+  border-radius:18px;
+  background:#ff2e68;
+  color:white;
+  font-size:18px;
+  margin:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover{
+  transform:scale(1.1) rotate(-2deg);
+  background:#ff4d81;
+}
+.card{
+  background:rgba(0,0,0,0.35);
+  padding:30px;
+  border-radius:30px;
+  max-width:520px;
+  line-height:1.7;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  box-shadow:0 15px 50px rgba(0,0,0,0.6);
+  animation:floatCard 6s ease-in-out infinite alternate;
+  z-index:2;
+  position:relative;
+}
+@keyframes floatCard{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-15px);}
+  100%{transform:translateY(0px);}
+}
+.text-creative{
+  display:inline-block;
+  font-weight:bold;
+  font-size:22px;
+  text-shadow:2px 2px 20px rgba(0,0,0,0.6);
+  background:linear-gradient(45deg,#ff8fb1,#ff3d7f,#ffa3c2,#ff6699);
+  background-size:400% 400%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:waveText 3s ease-in-out infinite alternate, gradientText 6s linear infinite;
+}
+@keyframes waveText{
+  0%{transform:translateX(0px) translateY(0px);}
+  25%{transform:translateX(2px) translateY(-2px);}
+  50%{transform:translateX(-2px) translateY(2px);}
+  75%{transform:translateX(1px) translateY(-1px);}
+  100%{transform:translateX(0px) translateY(0px);}
+}
+@keyframes gradientText{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+.floating{
+  position:absolute;
+  font-size:16px;
+  pointer-events:none;
+  user-select:none;
+  animation:floatAnim linear infinite;
+  opacity:0.7;
+  text-shadow:0 0 8px rgba(255,255,255,0.6);
+  z-index:1;
+}
+@keyframes floatAnim{
+  0%{transform:translateY(0px) rotate(0deg);}
+  50%{transform:translateY(-80px) rotate(20deg);}
+  100%{transform:translateY(0px) rotate(0deg);}
+}
+.scroll-animate{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s ease;
+}
+.scroll-animate.visible{
+  opacity:1;
+  transform:translateY(0px);
+}
+.gift{
+  display:inline-block;
+  font-size:50px;
+  margin:20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.gift:hover{
+  transform:scale(1.2) rotate(-10deg);
+}
+
+/* إطار الصور */
+.image-frame {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  margin: 20px auto;
+  border: 4px solid rgba(255,255,255,0.7);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.1);
+}
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="page" style="display:flex;">
+<h1 class="text-creative">ادخلي الباسورد يا شهد ♥</h1>
+<input id="pass" type="password" style="padding:14px;border-radius:12px;border:none;text-align:center;margin-top:20px">
+<br>
+<button onclick="login()">افتحي</button>
+</div>
+
+<!-- PAGE 1 -->
+<div id="p1" class="page">
+<div class="card scroll-animate">
+<h1 class="text-creative">سكرتي 💛</h1>
+<div class="image-frame">
+  <img src="image1.jpg" alt="ذكرياتنا">
+</div>
+يا شهد… انتِ ملاكي 💖 كل لحظة معاكِ بتهون عليا الدنيا 🌸  
+ضحكتك بتخليني أنسى أي هم 💛 وجودك جنبي هو الأمان ❤️  
+انتي فرحتي اليومية 😍 كل كلمة منك حكاية حب 💞  
+بحبك يا شهد 🦋 مهما حصل 🌟 كل يوم معاكِ حلم جميل 💛  
+</div>
+<button onclick="show('p2')">كملي →</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="p2" class="page">
+<div class="card scroll-animate">
+<h1 class="text-creative">فراشتي 🦋</h1>
+<div class="image-frame">
+  <img src="image2.jpg" alt="حبنا">
+</div>
+انتي اكتر حد بخاف عليه 💛 كل ضحكة منك هي كنز 💖  
+بحس بالسعادة وأنا معاكي 🌸 كل لحظة معاكي ممتعة ❤️  
+انتي الأمان اللي محتاجه 💞 ضحكتك بتطمن قلبي 💛  
+</div>
+<button onclick="show('p3')">كملي →</button>
+</div>
+
+<!-- PAGE 3 رمضان -->
+<div id="p3" class="page">
+<div class="card scroll-animate">
+<h1 class="text-creative">رمضان كريم 🌙</h1>
+<div class="image-frame">
+  <img src="image3.jpg" alt="رمضان معنا">
+</div>
+نفطر سوا ونقول رمضان كريم 💛  
+وجودك في حياتي نعمة 🌸 كل دعوة ليا ليكي 💖  
+نضحك بعد الفطار ❤️ نحب بعض أكتر 🌟  
+</div>
+<button onclick="show('p4')">كملي →</button>
+</div>
+
+<!-- PAGE 4 ذكريات -->
+<div id="p4" class="page">
+<div class="card scroll-animate">
+<h1 class="text-creative">ذكرياتنا 📸</h1>
+<div class="image-frame">
+  <img src="image4.jpg" alt="ذكريات">
+</div>
+كل دقيقة معاكي ذكرى 💖 حتى السكوت كلام 🌸  
+ضحكتنا سوا أحلى حاجة 💛 كل لحظة حبنا تكبر 💞  
+</div>
+<button onclick="show('story')">قصتنا →</button>
+</div>
+
+<!-- قصة حب -->
+<div id="story" class="page">
+<div class="card scroll-animate">
+<h1 class="text-creative">قصتنا 💛</h1>
+<div class="image-frame">
+  <img src="image5.jpg" alt="قصتنا">
+</div>
+التقينا بطريقة لم نتوقعها 💖 ومنذ ذلك اليوم كل لحظة أصبحت أجمل 🌸  
+كل ضحكة وكل كلمة تجمعنا تذكّرنا كم نحن محظوظين 💛  
+</div>
+<button onclick="show('mystery')">كملي →</button>
+</div>
+
+<!-- رسائل غامضة -->
+<div id="mystery" class="page">
+<div class="card scroll-animate">
+<h1 class="text-creative">رسائل غامضة 💌</h1>
+<div class="image-frame">
+  <img src="image6.jpg" alt="رسائل غامضة">
+</div>
+<p id="mystery-text" style="font-size:20px;line-height:2"></p>
+<button onclick="nextMystery()">التالي</button>
+<button onclick="show('future')">المستقبل →</button>
+</div>
+</div>
+
+<!-- المستقبل الجميل -->
+<div id="future" class="page">
+<div class="card scroll-animate">
+<h1 class="text-creative">المستقبل الجميل 🌟</h1>
+<p id="future-text" style="font-size:20px;line-height:2"></p>
+<button onclick="nextFuture()">التالي</button>
+<button onclick="show('gifts')">الهدايا →</button>
+</div>
+</div>
+
+<!-- الهدايا الافتراضية -->
+<div id="gifts" class="page">
+<h1 class="text-creative">هدايا افتراضية 🎁</h1>
+<div class="card">
+<span class="gift" onclick="alert('هذه لكِ من قلبي ❤️')">💖</span>
+<span class="gift" onclick="alert('هذه لكِ من قلبي ❤️')">🌹</span>
+<span class="gift" onclick="alert('هذه لكِ من قلبي ❤️')">🌟</span>
+<span class="gift" onclick="alert('هذه لكِ من قلبي ❤️')">🦋</span>
+<span class="gift" onclick="alert('هذه لكِ من قلبي ❤️')">💛</span>
+</div>
+<button onclick="show('final')">النهاية →</button>
+</div>
+
+<!-- النهاية -->
+<div id="final" class="page" style="background:linear-gradient(45deg,#ffb3c1,#ff5a87,#ff7f99);">
+<div class="card scroll-animate">
+<h1 class="text-creative">رسالة أخيرة ♥</h1>
+قد لا أستطيع أن أريك العالم كله 💖 لكن كل ما أملكه هو أن أحبك وأجعلك سعيدة كل يوم 💛  
+هذه الصفحة لتذكّرك كم أحبك ❤️💞🌸  
+كل لحظة معاك نعمة 💖 كل ثانية حبنا تكبر 🌟  
+</div>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+  const page=document.getElementById(id);
+  page.style.display='flex';
+  page.querySelectorAll('.scroll-animate').forEach(el=>setTimeout(()=>el.classList.add('visible'),200));
+}
+
+function login(){
+  const password = "29/12"; 
+  if(pass.value.trim() === password){
+    show('p1');
+  } else {
+    alert('😂💗مهي لو اكل كنتي عرفتيها');
+  }
+}
+
+// floating hearts and butterflies emojis
+const emojis = ['💛','❤️','🦋','💖','🌸'];
+function createFloating(){
+  const f = document.createElement('div');
+  f.className = 'floating';
+  f.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+  f.style.left = Math.random()*window.innerWidth+'px';
+  f.style.top = Math.random()*window.innerHeight+'px';
+  f.style.fontSize = (14+Math.random()*20)+'px';
+  f.style.animationDuration = (5+Math.random()*5)+'s';
+  document.body.appendChild(f);
+  setTimeout(()=>f.remove(),10000);
+}
+setInterval(createFloating, 400);
+
+// Mystery messages
+const mysteryMessages = [
+  "أنتِ تجعلين أيامي أفضل 💛",
+  "كل لحظة معكِ حلم جميل 💖",
+  "أحبك أكثر من أي كلمة يمكن أن تصف ❤️",
+  "وجودك يملأ قلبي سعادة 🌸"
+];
+let mysteryIndex=0;
+function nextMystery(){
+  document.getElementById('mystery-text').innerHTML = mysteryMessages[mysteryIndex];
+  mysteryIndex = (mysteryIndex+1)%mysteryMessages.length;
+}
+
+// Future messages
+const futureMessages = [
+  "سنضحك معًا كل صباح 💛",
+  "رحلاتنا القادمة ستكون مليئة بالمغامرات 🌟",
+  "كل عيد حب سيكون أجمل من الذي قبله 💖",
+  "سنحقق أحلامنا سويًا ❤️"
+];
+let futureIndex=0;
+function nextFuture(){
+  document.getElementById('future-text').innerHTML = futureMessages[futureIndex];
+  futureIndex = (futureIndex+1)%futureMessages.length;
+}
+</script>
+
+</body>
+</html>
